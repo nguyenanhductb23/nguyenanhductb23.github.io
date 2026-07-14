@@ -2,16 +2,13 @@
 
 A lightweight, responsive research portfolio for [nguyenanhductb23.github.io](https://nguyenanhductb23.github.io/).
 
-## Local preview
+## Preview
 
-```bash
-python3 -m http.server 8000
-```
-
-Then open `http://localhost:8000` locally. The published site uses HTTPS through GitHub Pages.
+Open `index.html` directly in a browser. No local server is required.
 
 ## Update content
 
 - Profile and page content: `index.html`
+- Publications: `publications.html`
 - Visual design and responsive layout: `styles.css`
 - Profile image, resume, and favicon: `assets/`
