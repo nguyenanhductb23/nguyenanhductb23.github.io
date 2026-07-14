@@ -14,4 +14,4 @@ Then open `http://localhost:8000` locally. The published site uses HTTPS through
 
 - Profile and page content: `index.html`
 - Visual design and responsive layout: `styles.css`
-- Profile image and favicon: `assets/`
+- Profile image, resume, and favicon: `assets/`

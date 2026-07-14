@@ -300,6 +300,84 @@ h2 {
 
 .text-link:hover { border-color: var(--green); color: var(--green); }
 
+.featured-publication {
+  padding: 25px 27px 27px;
+  border-top: 2px solid var(--ink);
+  border-bottom: 1px solid var(--line);
+  background: var(--white);
+}
+
+.publication-label {
+  margin: 0 0 8px;
+  color: var(--red);
+  font-size: .7rem;
+  font-weight: 750;
+  text-transform: uppercase;
+}
+
+.featured-publication h3 {
+  max-width: 680px;
+  margin: 0;
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.featured-publication > p:last-child {
+  max-width: 650px;
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+.research-outputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid var(--line);
+}
+
+.research-outputs div {
+  min-height: 105px;
+  padding: 21px 26px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.research-outputs div + div { border-left: 1px solid var(--line); }
+
+.research-outputs strong {
+  color: var(--green-dark);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.research-outputs span {
+  max-width: 190px;
+  color: #59645f;
+  font-size: .82rem;
+  line-height: 1.45;
+}
+
+.subsection-heading {
+  margin: 43px 0 19px;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.subsection-heading h3 {
+  margin: 0;
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.35rem;
+  font-weight: 500;
+}
+
 .project-list { border-top: 1px solid var(--ink); }
 
 .project {
@@ -340,20 +418,60 @@ h2 {
 .project-link { color: var(--green-dark); font-size: .8rem; font-weight: 650; }
 .project-link:hover { color: var(--green); }
 
-#experience > h2 { margin-bottom: 31px; font-size: 2rem; }
+#experience > h2,
+#education > h2 { margin-bottom: 31px; font-size: 2rem; }
+
+.timeline { border-top: 1px solid var(--ink); }
 
 .experience-item {
-  padding: 25px 0;
+  padding: 24px 0 25px;
   display: grid;
-  grid-template-columns: 126px minmax(0, 1fr);
+  grid-template-columns: 155px minmax(0, 1fr);
   gap: 20px;
-  border-top: 1px solid var(--ink);
   border-bottom: 1px solid var(--line);
 }
 
 .experience-date { color: var(--muted); font-size: .82rem; }
 .experience-item h3 { margin: 0 0 3px; color: var(--ink); font-size: 1rem; font-weight: 680; }
 .experience-item p { margin: 0; color: var(--muted); font-size: .91rem; }
+
+.experience-notes {
+  margin: 12px 0 0;
+  padding-left: 18px;
+  color: #5a6560;
+  font-size: .87rem;
+  line-height: 1.55;
+}
+
+.experience-notes li { margin: 4px 0; }
+
+.honors {
+  margin-top: 38px;
+  padding: 24px 26px 27px;
+  border-left: 3px solid var(--green);
+  background: var(--soft-green);
+}
+
+.honors-label {
+  margin: 0 0 15px;
+  color: var(--green-dark);
+  font-size: .7rem;
+  font-weight: 750;
+  text-transform: uppercase;
+}
+
+.honors ul {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 18px;
+  list-style: none;
+}
+
+.honors li { display: flex; flex-direction: column; gap: 3px; }
+.honors strong { color: var(--ink); font-family: Georgia, "Times New Roman", serif; font-size: 1.05rem; font-weight: 500; }
+.honors span { color: #5b6762; font-size: .8rem; line-height: 1.45; }
 
 .principles {
   margin-top: 30px;
@@ -451,11 +569,17 @@ h2 {
   .section { padding-bottom: 50px; margin-bottom: 50px; }
   h2 { font-size: 1.85rem; }
   .section-heading { align-items: start; flex-direction: column; }
-  .section-heading h2, #experience > h2, .contact h2 { font-size: 1.7rem; }
+  .section-heading h2, #experience > h2, #education > h2, .contact h2 { font-size: 1.7rem; }
+  .research-outputs { grid-template-columns: 1fr; }
+  .research-outputs div { min-height: 88px; }
+  .research-outputs div + div { border-left: 0; border-top: 1px solid var(--line); }
+  .subsection-heading { align-items: start; flex-direction: column; gap: 11px; }
   .project { grid-template-columns: 34px minmax(0, 1fr); gap: 8px; }
   .project-title-row { display: block; }
   .project-kind { display: block; margin-top: 3px; }
   .experience-item { grid-template-columns: 1fr; gap: 4px; }
+  .honors ul { grid-template-columns: 1fr; gap: 13px; }
+  .profile-links { flex-wrap: wrap; row-gap: 0; }
   .contact { padding: 28px 22px 31px; }
   .contact-actions { align-items: stretch; flex-direction: column; }
   .button { justify-content: center; }
